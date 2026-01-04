@@ -1,0 +1,211 @@
+/* =====================
+   Base styles
+   ===================== */
+
+:root {
+    --bg-main: #ffffff;
+    --bg-alt: #f6f7f9;
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --accent: #1f6feb;
+    --border-light: #dddddd;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    line-height: 1.6;
+}
+
+/* =====================
+   Layout helpers
+   ===================== */
+
+.container {
+    max-width: 1100px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section.alt {
+    background-color: var(--bg-alt);
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* =====================
+   Hero
+   ===================== */
+
+.hero {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+}
+
+.tagline {
+    max-width: 600px;
+    margin-top: 1rem;
+    color: var(--text-muted);
+}
+
+.hero-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Buttons */
+
+.btn {
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn.primary {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.btn.primary:hover {
+    background-color: #155ac7;
+}
+
+.btn.secondary {
+    border: 1px solid var(--border-light);
+    color: var(--text-main);
+}
+
+.btn.secondary:hover {
+    background-color: var(--bg-alt);
+}
+
+/* =====================
+   Skills
+   ===================== */
+
+.skills-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skill-block {
+    border: 1px solid var(--border-light);
+    padding: 1.25rem;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.skill-block ul {
+    padding-left: 1rem;
+    margin: 0.5rem 0 0;
+}
+
+/* =====================
+   Projects
+   ===================== */
+
+.projects-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.project-card {
+    border: 1px solid var(--border-light);
+    padding: 1.5rem;
+    border-radius: 6px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.project-desc {
+    color: var(--text-muted);
+}
+
+.project-tech,
+.project-outcome {
+    margin-top: 0.5rem;
+}
+
+/* =====================
+   Contact
+   ===================== */
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 0.75rem;
+}
+
+.contact-list a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   Footer
+   ===================== */
+
+.footer {
+    border-top: 1px solid var(--border-light);
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* =====================
+   Responsive
+   ===================== */
+
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
