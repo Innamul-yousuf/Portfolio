@@ -1,211 +1,191 @@
-/* =====================
-   Base styles
-   ===================== */
-
+/* ============ ROOT ============ */
 :root {
-    --bg-main: #ffffff;
-    --bg-alt: #f6f7f9;
-    --text-main: #1a1a1a;
-    --text-muted: #555555;
-    --accent: #1f6feb;
-    --border-light: #dddddd;
+    --bg-dark: #0e1117;
+    --bg-light: #ffffff;
+    --glass: rgba(255, 255, 255, 0.08);
+    --accent: #3fa9f5;
+    --text-main: #e6edf3;
+    --text-dark: #1a1a1a;
 }
 
-*,
-*::before,
-*::after {
+/* ============ RESET ============ */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
     color: var(--text-main);
-    background-color: var(--bg-main);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* =====================
-   Layout helpers
-   ===================== */
-
-.container {
-    max-width: 1100px;
-    padding: 0 1rem;
-    margin: 0 auto;
+/* ============ CANVAS ============ */
+#bg-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 }
 
-.section {
-    padding: 4rem 0;
-}
-
-.section.alt {
-    background-color: var(--bg-alt);
-}
-
-h1, h2, h3 {
-    line-height: 1.25;
-}
-
-h2 {
-    margin-bottom: 1.5rem;
-}
-
-/* =====================
-   Hero
-   ===================== */
-
+/* ============ HERO ============ */
 .hero {
-    padding: 5rem 0;
-    border-bottom: 1px solid var(--border-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
 }
 
-.tagline {
-    max-width: 600px;
+.subtitle {
     margin-top: 1rem;
-    color: var(--text-muted);
+    font-size: 1.2rem;
+    opacity: 0.85;
 }
 
-.hero-actions {
+.subtitle span {
+    color: var(--accent);
+}
+
+.cta {
     margin-top: 2rem;
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
-/* Buttons */
-
+/* ============ BUTTONS ============ */
 .btn {
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #000;
     text-decoration: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-}
-
-.btn.primary {
-    background-color: var(--accent);
-    color: #ffffff;
-}
-
-.btn.primary:hover {
-    background-color: #155ac7;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn.secondary {
-    border: 1px solid var(--border-light);
-    color: var(--text-main);
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
 }
 
-.btn.secondary:hover {
-    background-color: var(--bg-alt);
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(63,169,245,0.3);
 }
 
-/* =====================
-   Skills
-   ===================== */
-
-.skills-grid {
-    display: grid;
-    gap: 1.5rem;
+/* ============ SECTIONS ============ */
+.section {
+    padding: 5rem 1.5rem;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.skill-block {
-    border: 1px solid var(--border-light);
-    padding: 1.25rem;
-    border-radius: 6px;
-    background: #ffffff;
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.skill-block ul {
-    padding-left: 1rem;
-    margin: 0.5rem 0 0;
+.section.dark {
+    background: linear-gradient(180deg, #0e1117, #0b0e13);
 }
 
-/* =====================
-   Projects
-   ===================== */
+/* ============ SKILLS ============ */
+.skills-orbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
-.projects-grid {
+.orb {
+    padding: 0.8rem 1.3rem;
+    border-radius: 999px;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    cursor: default;
+    transition: transform 0.2s ease;
+}
+
+.orb:hover {
+    transform: scale(1.08);
+}
+
+/* ============ PROJECTS ============ */
+.project-grid {
     display: grid;
     gap: 1.5rem;
 }
 
 .project-card {
-    border: 1px solid var(--border-light);
     padding: 1.5rem;
-    border-radius: 6px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border-radius: 12px;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    transition: transform 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transform: translateY(-6px);
 }
 
-.project-desc {
-    color: var(--text-muted);
-}
-
-.project-tech,
-.project-outcome {
-    margin-top: 0.5rem;
-}
-
-/* =====================
-   Contact
-   ===================== */
-
-.contact-list {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-list li {
-    margin-bottom: 0.75rem;
-}
-
-.contact-list a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.contact-list a:hover {
-    text-decoration: underline;
-}
-
-/* =====================
-   Footer
-   ===================== */
-
-.footer {
-    border-top: 1px solid var(--border-light);
-    padding: 1.5rem 0;
+.project-card span {
+    display: block;
+    margin-top: 0.8rem;
     font-size: 0.9rem;
-    color: var(--text-muted);
+    opacity: 0.8;
 }
 
-/* =====================
-   Responsive
-   ===================== */
+/* ============ CONTACT ============ */
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
+.contact-card {
+    padding: 1rem 1.5rem;
+    background: var(--accent);
+    color: #000;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ============ FOOTER ============ */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* ============ REVEAL ============ */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* ============ RESPONSIVE ============ */
 @media (min-width: 768px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .projects-grid {
+    .project-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 3.5rem;
     }
 }
