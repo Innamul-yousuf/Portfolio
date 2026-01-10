@@ -1,94 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Innamul Yousuf | Web Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Innamul Yousuf – Backend and Full-Stack developer building well-engineered web products.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innamul Yousuf | Backend & Full-Stack Developer</title>
 
-    <link rel="stylesheet" href="style.css">
+  <!-- Meta for SEO -->
+  <meta name="description" content="Innamul Yousuf — Backend / Full-Stack Developer specialising in Java, Spring Boot, REST APIs, AWS, and system design." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-    <div class="hero-container">
-        
-        <!-- Photo -->
-        <div class="hero-image">
-            <img src="assets/profile.jpg" alt="Innamul Yousuf portrait">
-        </div>
+  <!-- Background visuals -->
+  <div class="bg-gradient"></div>
+  <div class="bg-noise"></div>
 
-        <!-- Text -->
-        <div class="hero-text">
-            <h1>Innamul Yousuf</h1>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="profile-wrapper">
+        <!-- Replace profile.jpg with your real photo -->
+        <img src="profile.jpg" alt="Innamul Yousuf photo" class="profile-img" />
+        <span class="profile-ring"></span>
+      </div>
 
-            <p class="tagline">
-                Turning ideas into <strong>well-engineered web products</strong>.
-            </p>
+      <h1>Innamul Yousuf</h1>
+      <p class="tagline">
+        Turning ideas into well-engineered web products
+      </p>
 
-            <p class="intro">
-                I work primarily with PLM systems, focusing on backend development,
-                integrations, and data-driven workflows. Alongside my core work,
-                I actively design and build web applications, collaborating
-                end-to-end from idea to deployment.
-            </p>
-
-            <div class="hero-actions">
-                <a href="#work" class="btn primary">View Work</a>
-                <a href="#contact" class="btn secondary">Contact</a>
-            </div>
-        </div>
-
+      <div class="hero-actions">
+        <a href="#projects" class="btn primary">View Work</a>
+        <a href="#contact" class="btn ghost">Contact Me</a>
+      </div>
     </div>
-</section>
+  </header>
 
-<!-- ================= PURPOSE ================= -->
-<section class="section purpose">
-    <div class="section-inner">
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+
+    <p>
+      I work primarily with PLM systems, focusing on backend development,
+      integrations, and data-driven workflows. Alongside my core work, I actively
+      design and build web applications, collaborating end-to-end from idea to
+      deployment.
+    </p>
+
+    <p>
+      I also contribute to purpose-driven platforms, including Islamic and
+      community-based projects, where clean engineering, clarity, and
+      responsibility matter more than hype or trends.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section dark">
+    <h2>Tech I Work With</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <ul>
+          <li>Java</li>
+          <li>Spring Boot</li>
+          <li>REST APIs</li>
+          <li>Data-driven workflows</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <ul>
+          <li>Clean, intuitive UI</li>
+          <li>Responsive layouts</li>
+          <li>Semantic HTML & CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Cloud & DevOps</h3>
+        <ul>
+          <li>AWS</li>
+          <li>Deployment pipelines</li>
+          <li>Secure configurations</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Architecture</h3>
+        <ul>
+          <li>System design</li>
+          <li>Application architecture</li>
+          <li>Production readiness</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Selected Work</h2>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>Enterprise PLM Integration Platform</h3>
         <p>
-            I am also happy to contribute to <strong>purpose-driven platforms</strong>,
-            including Islamic and community-based projects, where clean engineering,
-            clarity, and responsibility matter more than hype or trends.
+          Designed and implemented secure backend services for PLM data
+          synchronization across systems.
         </p>
+        <span class="tech">Java · Spring Boot · SQL</span>
+      </article>
+
+      <article class="project-card">
+        <h3>Secure Web Application Platform</h3>
+        <p>
+          Built backend-driven web applications with strong access control,
+          auditability, and clean UI.
+        </p>
+        <span class="tech">Spring Boot · REST · AWS</span>
+      </article>
+
+      <article class="project-card">
+        <h3>Cloud-Hosted Data Services</h3>
+        <p>
+          Architected scalable services focused on reliability, performance,
+          and maintainability.
+        </p>
+        <span class="tech">AWS · System Design</span>
+      </article>
     </div>
-</section>
+  </section>
 
-<!-- ================= TECH ================= -->
-<section class="section tech" id="work">
-    <div class="section-inner">
-        <h2>Tech I Work With</h2>
+  <!-- EXPERIENCE PHILOSOPHY -->
+  <section class="section dark">
+    <h2>How I Build</h2>
 
-        <div class="tech-grid">
-            <div class="tech-card">Java</div>
-            <div class="tech-card">Spring Boot</div>
-            <div class="tech-card">REST APIs</div>
-            <div class="tech-card">Clean Frontend UI</div>
-            <div class="tech-card">AWS</div>
-            <div class="tech-card">System Design</div>
-            <div class="tech-card">Application Architecture</div>
-        </div>
+    <p>
+      I focus on building systems that last. Clear boundaries, secure defaults,
+      maintainable code, and simple interfaces backed by solid behavior.
+      Production quality matters more to me than trends or shortcuts.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="section contact">
+    <h2>Contact</h2>
+
+    <div class="contact-links">
+      <a href="mailto:your-email@example.com">Email</a>
+      <a href="https://github.com/your-username" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
     </div>
-</section>
 
-<!-- ================= CONTACT ================= -->
-<section class="section contact" id="contact">
-    <div class="section-inner">
-        <h2>Let’s Build Something Reliable</h2>
+    <p class="footer-note">
+      © 2026 Innamul Yousuf. Built clean. Built to last.
+    </p>
+  </footer>
 
-        <div class="contact-links">
-            <a href="mailto:innamulyousuf@gmail.com">Email</a>
-            <a href="https://github.com/innamulyousuf" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/innamulyousuf" target="_blank">LinkedIn</a>
-        </div>
-    </div>
-</section>
-
-<footer>
-    © 2026 Innamul Yousuf
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
