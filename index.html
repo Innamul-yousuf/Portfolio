@@ -1,227 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic SEO + Accessibility -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Innamul Yousuf – Backend and Full-Stack Developer specializing in Java, Spring Boot, REST APIs, and system design." />
-    <title>Innamul Yousuf | Backend / Full-Stack Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innamul Yousuf | Backend / Full-Stack Engineer</title>
+    <meta name="description" content="Portfolio of Innamul Yousuf – backend and full-stack engineer focused on Java, Spring Boot, scalable systems, and clean architecture.">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- ================= HEADER / HERO ================= -->
-    <header class="hero">
-        <div class="container">
-            <h1>Innamul Yousuf</h1>
-            <p class="tagline">
-                Backend / Full-Stack Developer focused on building reliable,
-                scalable and production-ready systems.
+
+<!-- Background Canvas -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="reveal">Innamul Yousuf</h1>
+        <p class="subtitle reveal">
+            Backend / Full-Stack Engineer building
+            <span>reliable, scalable systems</span>
+        </p>
+
+        <div class="cta reveal">
+            <a href="#projects" class="btn">View Work</a>
+            <a href="#contact" class="btn secondary">Contact</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section reveal" id="about">
+    <h2>About Me</h2>
+    <p>
+        I design backend systems that prioritize correctness, performance,
+        and long-term maintainability. My work centers around Java,
+        Spring Boot, REST APIs, and relational databases.
+    </p>
+    <p>
+        I focus on building software that survives production realities:
+        failure handling, security, data integrity, and predictable behavior
+        under load.
+    </p>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section dark reveal" id="skills">
+    <h2>Core Skills</h2>
+
+    <div class="skills-orbs">
+        <div class="orb">Java</div>
+        <div class="orb">Spring Boot</div>
+        <div class="orb">REST APIs</div>
+        <div class="orb">SQL</div>
+        <div class="orb">System Design</div>
+        <div class="orb">Security</div>
+        <div class="orb">AWS</div>
+        <div class="orb">Linux</div>
+    </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section reveal" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Secure File Management Platform</h3>
+            <p>
+                Backend system for encrypted file storage with user-level
+                access control and audit logging.
             </p>
-
-            <div class="hero-actions">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="#contact" class="btn secondary">Contact</a>
-            </div>
+            <span>Java · Spring Boot · AWS S3 · SQL</span>
         </div>
-    </header>
 
-    <main>
-        <!-- ================= ABOUT ================= -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>
-                    I design and build backend systems with a strong focus on
-                    correctness, performance, and maintainability. My work
-                    revolves around Java, Spring Boot, RESTful APIs, and
-                    relational databases.
-                </p>
-                <p>
-                    I approach development from a production-first mindset:
-                    clear data models, explicit error handling, secure access
-                    control, and predictable deployments. I value simple
-                    architectures that scale through good design rather than
-                    unnecessary complexity.
-                </p>
-            </div>
-        </section>
-
-        <!-- ================= SKILLS ================= -->
-        <section id="skills" class="section alt">
-            <div class="container">
-                <h2>Technical Skills</h2>
-
-                <div class="skills-grid">
-                    <div class="skill-block">
-                        <h3>Backend</h3>
-                        <ul>
-                            <li>Java</li>
-                            <li>Spring Boot</li>
-                            <li>REST API Design</li>
-                            <li>Validation & Error Handling</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-block">
-                        <h3>Databases</h3>
-                        <ul>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
-                            <li>SQL Server</li>
-                            <li>Schema Design</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-block">
-                        <h3>Security</h3>
-                        <ul>
-                            <li>Authentication & Authorization</li>
-                            <li>JWT</li>
-                            <li>Secure API Access</li>
-                            <li>Basic Encryption Concepts</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-block">
-                        <h3>DevOps & Deployment</h3>
-                        <ul>
-                            <li>Linux Servers</li>
-                            <li>Nginx</li>
-                            <li>Docker (Basics)</li>
-                            <li>AWS EC2</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-block">
-                        <h3>Tools</h3>
-                        <ul>
-                            <li>Git</li>
-                            <li>Postman</li>
-                            <li>Maven</li>
-                            <li>IntelliJ IDEA</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= PROJECTS ================= -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Selected Projects</h2>
-
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <h3>Secure File Management System</h3>
-                        <p class="project-desc">
-                            Designed a backend system for uploading, encrypting,
-                            and downloading user files with strict access
-                            control.
-                        </p>
-                        <p class="project-tech">
-                            <strong>Tech:</strong> Java, Spring Boot, AWS S3,
-                            JWT, SQL
-                        </p>
-                        <p class="project-outcome">
-                            Resulted in a secure, auditable storage solution
-                            suitable for multi-user environments.
-                        </p>
-                    </article>
-
-                    <article class="project-card">
-                        <h3>REST API for Business Data Processing</h3>
-                        <p class="project-desc">
-                            Built a structured REST API to ingest, validate, and
-                            process large datasets from external systems.
-                        </p>
-                        <p class="project-tech">
-                            <strong>Tech:</strong> Spring Boot, SQL Server,
-                            Validation APIs
-                        </p>
-                        <p class="project-outcome">
-                            Improved data consistency and reduced processing
-                            errors through strict schema validation.
-                        </p>
-                    </article>
-
-                    <article class="project-card">
-                        <h3>Internal Admin Dashboard Backend</h3>
-                        <p class="project-desc">
-                            Developed backend services to support an internal
-                            admin dashboard for tracking system operations.
-                        </p>
-                        <p class="project-tech">
-                            <strong>Tech:</strong> Java, REST APIs, MySQL,
-                            Role-based Access
-                        </p>
-                        <p class="project-outcome">
-                            Enabled secure operational visibility without
-                            exposing critical internals.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= EXPERIENCE / APPROACH ================= -->
-        <section id="experience" class="section alt">
-            <div class="container">
-                <h2>How I Build Systems</h2>
-                <p>
-                    I focus on clarity before code: understanding data flow,
-                    defining contracts, and modeling failure scenarios early.
-                </p>
-                <p>
-                    I prioritize readable APIs, stable schemas, and defensive
-                    programming. Logging, monitoring, and clear deployment
-                    steps are treated as part of the system, not afterthoughts.
-                </p>
-                <p>
-                    My goal is always the same: systems that behave predictably
-                    under load, are easy to reason about, and can be maintained
-                    by any competent engineer.
-                </p>
-            </div>
-        </section>
-
-        <!-- ================= CONTACT ================= -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <ul class="contact-list">
-                    <li>
-                        <strong>Email:</strong>
-                        <a href="mailto:innamulyousuf@gmail.com">
-                            innamulyousuf@gmail.com
-                        </a>
-                    </li>
-                    <li>
-                        <strong>GitHub:</strong>
-                        <a href="https://github.com/" target="_blank" rel="noopener">
-                            github.com/innamulyousuf
-                        </a>
-                    </li>
-                    <li>
-                        <strong>LinkedIn:</strong>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
-                            linkedin.com/in/innamulyousuf
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 Innamul Yousuf</p>
+        <div class="project-card">
+            <h3>Enterprise REST API</h3>
+            <p>
+                Designed and implemented REST services handling structured
+                business data with validation and versioning.
+            </p>
+            <span>Spring Boot · SQL Server · JWT</span>
         </div>
-    </footer>
 
-    <!-- Optional JS -->
-    <script src="script.js"></script>
+        <div class="project-card">
+            <h3>Internal Admin Backend</h3>
+            <p>
+                Role-based backend services powering internal monitoring
+                and operational dashboards.
+            </p>
+            <span>Java · MySQL · Secure APIs</span>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section dark reveal" id="contact">
+    <h2>Contact</h2>
+
+    <div class="contact-cards">
+        <a href="mailto:innamulyousuf@gmail.com" class="contact-card">
+            Email
+        </a>
+        <a href="https://github.com/innamulyousuf" target="_blank" class="contact-card">
+            GitHub
+        </a>
+        <a href="https://linkedin.com/in/innamulyousuf" target="_blank" class="contact-card">
+            LinkedIn
+        </a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Innamul Yousuf
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
